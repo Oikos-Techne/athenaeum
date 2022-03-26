@@ -1,23 +1,23 @@
 package dev.kellyburton.athenaeumcatalogueservice.models;
 
 public class Rating {
-    private String bookId;
+    private String id;
     private int rating;
 
     public Rating() {
     }
 
-    public Rating(String bookId, int rating) {
-        this.bookId = bookId;
+    public Rating(String id, int rating) {
+        this.id = id;
         this.rating = rating;
     }
 
     public String getBookId() {
-        return bookId;
+        return id;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setBookId(String id) {
+        this.id = id;
     }
 
     public int getRating() {

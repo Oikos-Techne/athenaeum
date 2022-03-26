@@ -26,11 +26,11 @@ public class AthenaeumCatalogResource {
     public List<CatalogItem> getCatalog(@PathVariable("UUID") String UUID) {
 
 
-        UserRating ratings = restTemplate.getForObject("http://localhost:8082/ratingsdata/users/" +UUID, UserRating.class);
+        UserRating ratings = restTemplate.getForObject("http://athenaeum-rating-service/ratingsdata/users/" +UUID, UserRating.class);
 
         return ratings.getUserRating().stream().map(rating -> {
                     // Iterating through each book id, call book info service
-                    Book book = restTemplate.getForObject("http://localhost:8081/books/" + rating.getBookId(), Book.class);
+                    Book book = restTemplate.getForObject("http://athenaeum-book-service/books/" + rating.getBookId(), Book.class);
                     return new CatalogItem(book.getName(), "Chestbursting fun", rating.getRating());
                 })
                 .collect(Collectors.toList());

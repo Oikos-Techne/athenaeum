@@ -1,28 +1,34 @@
 package dev.kellyburton.athenaeumbookservice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Book {
 
-    private String bookId;
-    private String name;
+    private String id;
+    private VolumeInfo volumeInfo;
 
-    public Book(String bookId, String name) {
-        this.bookId = bookId;
-        this.name = name;
+    public Book() {
     }
 
-    public String getBookId() {
-        return bookId;
+    public Book(String id, VolumeInfo volumeInfo) {
+        this.id = id;
+        this.volumeInfo = volumeInfo;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public VolumeInfo getVolumeInfo() {
+        return volumeInfo;
     }
 
-    public String getName() {
-        return name;
+    public void setVolumeInfo(VolumeInfo volumeInfo) {
+        this.volumeInfo = volumeInfo;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getId() {
+        return id;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 }
