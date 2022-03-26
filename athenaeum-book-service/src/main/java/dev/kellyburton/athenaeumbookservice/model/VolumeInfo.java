@@ -10,17 +10,19 @@ public class VolumeInfo {
     private String publisher;
     private String publishedDate;
     private int pageCount;
+    private List<IndustryIdentifiers> industryIdentifiers;
 
 
     public VolumeInfo() {
     }
 
-    public VolumeInfo(String title, List<String> authors, String publisher, String publishedDate, int pageCount)  {
+    public VolumeInfo(String title, List<String> authors, String publisher, String publishedDate, int pageCount, List<IndustryIdentifiers> industryIdentifiers) {
         this.title = title;
         this.authors = authors;
         this.publisher = publisher;
         this.publishedDate = publishedDate;
         this.pageCount = pageCount;
+        this.industryIdentifiers = industryIdentifiers;
     }
 
     public String getTitle() {
@@ -61,5 +63,13 @@ public class VolumeInfo {
 
     public void setPageCount(int pageCount) {
         this.pageCount = pageCount;
+    }
+
+    public List<IndustryIdentifiers> getIndustryIdentifiers() {
+        return industryIdentifiers;
+    }
+
+    public void setIndustryIdentifiers(List<IndustryIdentifiers> industryIdentifiers) {
+        this.industryIdentifiers = industryIdentifiers;
     }
 }
