@@ -3,15 +3,15 @@ package dev.kellyburton.athenaeumcatalogueservice.models;
 public class Book {
 
     private String id;
-    private String title;
+    private VolumeInfo volumeInfo;
 
     public Book() {
 
     }
 
-    public Book(String id, String title) {
+    public Book(String id, VolumeInfo volumeInfo) {
         this.id = id;
-        this.title = title;
+        this.volumeInfo = volumeInfo;
     }
 
     public String getBookId() {
@@ -22,11 +22,11 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return title;
+    public VolumeInfo getName() {
+        return volumeInfo;
     }
 
     public void setName(String name) {
-        this.title = title;
+        this.volumeInfo = volumeInfo;
     }
 }

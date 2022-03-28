@@ -1,38 +1,33 @@
 package dev.kellyburton.athenaeumcatalogueservice.models;
 
+import java.util.List;
+
 public class CatalogItem {
 
-    private String name;
-    private String desc;
-    private int rating;
+    private Book book;
+    private BookInformation bookInformation;
 
-    public CatalogItem(String name, String desc, int rating) {
-        this.name = name;
-        this.desc = desc;
-        this.rating = rating;
+    public CatalogItem() {
     }
 
-    public String getName() {
-        return name;
+    public CatalogItem(Book book, BookInformation bookInformation) {
+        this.book = book;
+        this.bookInformation = bookInformation;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Book getBook() {
+        return book;
     }
 
-    public String getDesc() {
-        return desc;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public BookInformation getBookInformation() {
+        return bookInformation;
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setBookInformation(BookInformation bookInformation) {
+        this.bookInformation = bookInformation;
     }
 }

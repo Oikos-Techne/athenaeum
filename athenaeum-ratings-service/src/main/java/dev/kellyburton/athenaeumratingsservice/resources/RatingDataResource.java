@@ -24,7 +24,7 @@ public class RatingDataResource {
     public UserBookInformation getBookInformation(@PathVariable("UUID") String UUID ) {
         List<BookInformation> ratings = Arrays.asList(
                 new BookInformation("bWIkEAAAQBAJ", "bookshelf 1", true, "ScifiTBR", true, false, 4, Arrays.asList("Foo", "Bar") ),
-                new BookInformation("AQAAAEDcyQaJyM", "", true, "ScifiTBR", true, true, 4, Arrays.asList("Foo", "bizz") )
+                new BookInformation("6OuvDAAAQBAJ", "", true, "ScifiTBR", true, true, 4, Arrays.asList("Foo", "bizz") )
         );
         UserBookInformation userBookInformation = new UserBookInformation();
         userBookInformation.setBookInformation(ratings);
