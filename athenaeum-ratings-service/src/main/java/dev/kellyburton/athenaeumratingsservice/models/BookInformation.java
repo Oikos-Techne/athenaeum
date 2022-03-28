@@ -2,7 +2,7 @@ package dev.kellyburton.athenaeumratingsservice.models;
 
 import java.util.List;
 
-public class UserBookInformation {
+public class BookInformation {
 
     private String location;
     private boolean read;
@@ -12,10 +12,10 @@ public class UserBookInformation {
     private int rating;
     private List<String> tags;
 
-    public UserBookInformation() {
+    public BookInformation() {
     }
 
-    public UserBookInformation(String location, boolean read, String TBR, boolean owned, boolean wishlist, int rating, List<String> tags) {
+    public BookInformation(String location, boolean read, String TBR, boolean owned, boolean wishlist, int rating, List<String> tags) {
         this.location = location;
         this.read = read;
         this.TBR = TBR;
