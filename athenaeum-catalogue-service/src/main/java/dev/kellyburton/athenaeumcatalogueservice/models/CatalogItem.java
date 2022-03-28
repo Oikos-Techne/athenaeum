@@ -1,26 +1,24 @@
 package dev.kellyburton.athenaeumcatalogueservice.models;
 
-import java.util.List;
-
 public class CatalogItem {
 
-    private Book book;
+    private Volume volume;
     private BookInformation bookInformation;
 
     public CatalogItem() {
     }
 
-    public CatalogItem(Book book, BookInformation bookInformation) {
-        this.book = book;
+    public CatalogItem(Volume volume, BookInformation bookInformation) {
+        this.volume = volume;
         this.bookInformation = bookInformation;
     }
 
-    public Book getBook() {
-        return book;
+    public Volume getVolume() {
+        return volume;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setVolume(Volume volume) {
+        this.volume = volume;
     }
 
     public BookInformation getBookInformation() {

@@ -17,17 +17,17 @@ public class AthenaeumCatalogResource {
     @Autowired
     private RestTemplate restTemplate;
 
+
     @RequestMapping("/{UUID}")
     public List<CatalogItem> getCatalog(@PathVariable("UUID") String UUID) {
 
 
         UserBookInformation bookInformation = restTemplate.getForObject("http://athenaeum-rating-service/ratingsdata/users/" +UUID, UserBookInformation.class);
 
-        assert bookInformation != null;
         return bookInformation.getBookInformation().stream().map(bookInformation1 -> {
                     // Iterating through each book id, call book info service
-                    Book book = restTemplate.getForObject("http://athenaeum-book-service/books/" + bookInformation1.getId(), Book.class);
-                    return new CatalogItem(book, bookInformation1);
+                    Volume volume = restTemplate.getForObject("http://athenaeum-book-service/books/" + bookInformation1.getId(), Volume.class);
+                    return new CatalogItem(volume, bookInformation1);
                 })
                 .collect(Collectors.toList());
 

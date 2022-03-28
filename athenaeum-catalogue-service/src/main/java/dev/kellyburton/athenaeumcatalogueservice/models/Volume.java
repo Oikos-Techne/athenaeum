@@ -1,32 +1,32 @@
 package dev.kellyburton.athenaeumcatalogueservice.models;
 
-public class Book {
+public class Volume {
 
     private String id;
     private VolumeInfo volumeInfo;
 
-    public Book() {
+    public Volume() {
 
     }
 
-    public Book(String id, VolumeInfo volumeInfo) {
+    public Volume(String id, VolumeInfo volumeInfo) {
         this.id = id;
         this.volumeInfo = volumeInfo;
     }
 
-    public String getBookId() {
+    public String getId() {
         return id;
     }
 
-    public void setBookId(String bookId) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public VolumeInfo getName() {
+    public VolumeInfo getVolumeInfo() {
         return volumeInfo;
     }
 
-    public void setName(String name) {
+    public void setVolumeInfo(VolumeInfo volumeInfo) {
         this.volumeInfo = volumeInfo;
     }
 }
