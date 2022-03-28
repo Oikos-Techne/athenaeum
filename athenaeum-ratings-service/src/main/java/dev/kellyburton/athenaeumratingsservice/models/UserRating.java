@@ -1,4 +1,4 @@
-package dev.kellyburton.athenaeumratingsservice.modles;
+package dev.kellyburton.athenaeumratingsservice.models;
 
 import java.util.List;
 

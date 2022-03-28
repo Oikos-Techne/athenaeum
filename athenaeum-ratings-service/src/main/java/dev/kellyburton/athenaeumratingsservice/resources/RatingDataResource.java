@@ -1,7 +1,7 @@
 package dev.kellyburton.athenaeumratingsservice.resources;
 
-import dev.kellyburton.athenaeumratingsservice.modles.Rating;
-import dev.kellyburton.athenaeumratingsservice.modles.UserRating;
+import dev.kellyburton.athenaeumratingsservice.models.Rating;
+import dev.kellyburton.athenaeumratingsservice.models.UserRating;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
