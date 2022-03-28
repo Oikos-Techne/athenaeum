@@ -4,6 +4,7 @@ import java.util.List;
 
 public class BookInformation {
 
+    private String id;
     private String location;
     private boolean read;
     private String TBR;
@@ -15,7 +16,8 @@ public class BookInformation {
     public BookInformation() {
     }
 
-    public BookInformation(String location, boolean read, String TBR, boolean owned, boolean wishlist, int rating, List<String> tags) {
+    public BookInformation(String id, String location, boolean read, String TBR, boolean owned, boolean wishlist, int rating, List<String> tags) {
+        this.id = id;
         this.location = location;
         this.read = read;
         this.TBR = TBR;
@@ -23,6 +25,14 @@ public class BookInformation {
         this.wishlist = wishlist;
         this.rating = rating;
         this.tags = tags;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getLocation() {

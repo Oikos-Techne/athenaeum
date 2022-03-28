@@ -1,6 +1,8 @@
 package dev.kellyburton.athenaeumratingsservice.resources;
 
+import dev.kellyburton.athenaeumratingsservice.models.BookInformation;
 import dev.kellyburton.athenaeumratingsservice.models.Rating;
+import dev.kellyburton.athenaeumratingsservice.models.UserBookInformation;
 import dev.kellyburton.athenaeumratingsservice.models.UserRating;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,14 +21,14 @@ public class RatingDataResource {
     }
 
     @RequestMapping("users/{UUID}")
-    public UserRating getUserRating(@PathVariable("UUID") String UUID ) {
-        List<Rating> ratings = Arrays.asList(
-                new Rating("bWIkEAAAQBAJ", 4),
-                new Rating("OYGtqQtK87AC", 3)
+    public UserBookInformation getBookInformation(@PathVariable("UUID") String UUID ) {
+        List<BookInformation> ratings = Arrays.asList(
+                new BookInformation("bWIkEAAAQBAJ", "bookshelf 1", true, "ScifiTBR", true, false, 4, Arrays.asList("Foo", "Bar") ),
+                new BookInformation("AQAAAEDcyQaJyM", "", true, "ScifiTBR", true, true, 4, Arrays.asList("Foo", "bizz") )
         );
-        UserRating userRating = new UserRating();
-        userRating.setUserRating(ratings);
-        return userRating;
+        UserBookInformation userBookInformation = new UserBookInformation();
+        userBookInformation.setBookInformation(ratings);
+        return userBookInformation;
     }
 
 
