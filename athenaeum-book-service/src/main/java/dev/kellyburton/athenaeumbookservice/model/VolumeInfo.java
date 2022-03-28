@@ -11,18 +11,24 @@ public class VolumeInfo {
     private String publishedDate;
     private int pageCount;
     private List<IndustryIdentifiers> industryIdentifiers;
+    private String description;
+    private List<String> categories;
+    private ImageLinks imageLinks;
 
 
     public VolumeInfo() {
     }
 
-    public VolumeInfo(String title, List<String> authors, String publisher, String publishedDate, int pageCount, List<IndustryIdentifiers> industryIdentifiers) {
+    public VolumeInfo(String title, List<String> authors, String publisher, String publishedDate, int pageCount, List<IndustryIdentifiers> industryIdentifiers, String description, List<String> categories, ImageLinks imageLinks) {
         this.title = title;
         this.authors = authors;
         this.publisher = publisher;
         this.publishedDate = publishedDate;
         this.pageCount = pageCount;
         this.industryIdentifiers = industryIdentifiers;
+        this.description = description;
+        this.categories = categories;
+        this.imageLinks = imageLinks;
     }
 
     public String getTitle() {
@@ -72,4 +78,29 @@ public class VolumeInfo {
     public void setIndustryIdentifiers(List<IndustryIdentifiers> industryIdentifiers) {
         this.industryIdentifiers = industryIdentifiers;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<String> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
+    }
+
+    public ImageLinks getImageLinks() {
+        return imageLinks;
+    }
+
+    public void setImageLinks(ImageLinks imageLinks) {
+        this.imageLinks = imageLinks;
+    }
 }
+
