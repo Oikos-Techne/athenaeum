@@ -2,12 +2,14 @@ package dev.kellyburton.athenaeumratingsservice.service;
 
 import dev.kellyburton.athenaeumratingsservice.models.BookInformation;
 import dev.kellyburton.athenaeumratingsservice.repository.BookInfoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class BookInfoService {
+
     private final BookInfoRepository bookInfoRepository;
 
     public BookInfoService(BookInfoRepository bookInfoRepository) {
@@ -44,5 +46,9 @@ public class BookInfoService {
 
     public Object getBookInfoById(String id) {
        return bookInfoRepository.findById(id);
+    }
+
+    public Object getBookInfoByBookId(String volumeId) {
+        return bookInfoRepository.findByVolumeId(volumeId);
     }
 }

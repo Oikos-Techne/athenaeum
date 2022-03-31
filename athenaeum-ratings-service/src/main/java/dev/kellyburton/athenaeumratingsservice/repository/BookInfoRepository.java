@@ -7,4 +7,6 @@ import org.springframework.data.mongodb.repository.Query;
 import java.util.Optional;
 
 public interface BookInfoRepository extends MongoRepository<BookInformation, String> {
+    @Query("{'volumeId': ?0}")
+    Optional<BookInformation> findByVolumeId(String volumeId);
 }

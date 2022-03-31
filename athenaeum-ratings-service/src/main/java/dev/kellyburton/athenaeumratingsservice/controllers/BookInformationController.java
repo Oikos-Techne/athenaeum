@@ -30,9 +30,14 @@ public class BookInformationController {
         return ResponseEntity.ok(bookInfoService.getAllBookInfo());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("post/{id}")
     public ResponseEntity getBookInfoById(@PathVariable String id){
         return ResponseEntity.ok(bookInfoService.getBookInfoById(id));
+    }
+
+    @GetMapping("/{volumeId}")
+    public ResponseEntity getBookInfoByVolumeId(@PathVariable String volumeId){
+        return ResponseEntity.ok(bookInfoService.getBookInfoByBookId(volumeId));
     }
 
     @DeleteMapping("/{id}")

@@ -17,6 +17,9 @@ public class BookResource {
 
     @RequestMapping("/{id}")
     public Mono<Book> getBookInfo(@PathVariable("id") String id ){
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println(id);
+        System.out.println("-------------------------------------------------------------------------");
         Mono<Book> book = webClientBuilder.build()
                 .get()
                 .uri("https://www.googleapis.com/books/v1/volumes/"+id)
