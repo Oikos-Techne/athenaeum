@@ -1,10 +1,17 @@
 package dev.kellyburton.athenaeumratingsservice.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.List;
 
+@Document
 public class BookInformation {
 
+    @Id
     private String id;
+    private String volumeId;
+    private String UUID;
     private String location;
     private boolean read;
     private String TBR;
@@ -16,8 +23,10 @@ public class BookInformation {
     public BookInformation() {
     }
 
-    public BookInformation(String id, String location, boolean read, String TBR, boolean owned, boolean wishlist, int rating, List<String> tags) {
+    public BookInformation(String id, String volumeId, String UUID, String location, boolean read, String TBR, boolean owned, boolean wishlist, int rating, List<String> tags) {
         this.id = id;
+        this.volumeId = volumeId;
+        this.UUID = UUID;
         this.location = location;
         this.read = read;
         this.TBR = TBR;
@@ -33,6 +42,22 @@ public class BookInformation {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getVolumeId() {
+        return volumeId;
+    }
+
+    public void setVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+    }
+
+    public String getUUID() {
+        return UUID;
+    }
+
+    public void setUUID(String UUID) {
+        this.UUID = UUID;
     }
 
     public String getLocation() {
